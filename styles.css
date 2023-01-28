@@ -1,0 +1,154 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --primary-soft-blue: hsl(215, 51%, 70%);
+  --primary-cyan: hsl(178, 100%, 50%);
+  --neutral-main-bg: hsl(217, 54%, 11%);
+  --neutral-card-bg: hsl(216, 50%, 16%);
+  --neutral-line: hsl(215, 32%, 27%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --box-shadow-color: hsl(217deg 73% 2% / 77%);
+}
+
+/* ############################ INIT ################################# */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--primary-soft-blue);
+  background-color: #000;
+
+  font-size: 1.4rem;
+}
+
+.container {
+  background-color: var(--neutral-main-bg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 144rem;
+  height: 100vh;
+  margin: auto;
+}
+
+.card {
+  background-color: var(--neutral-card-bg);
+  width: 30rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 23px -5px var(--box-shadow-color);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-imgs {
+  position: relative;
+  transition: all 3s ease;
+}
+
+.card-img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.card-img-hover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 255, 255, 0.452);
+}
+
+.card-imgs:hover .card-img-hover {
+  display: flex;
+  cursor: pointer;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-description-title {
+  color: var(--neutral-white);
+}
+
+.card-description-text {
+  line-height: 1.5;
+}
+
+.card-description-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-description-info p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-value {
+  color: var(--primary-cyan);
+}
+
+hr {
+  border-top: 1px solid var(--neutral-line);
+}
+
+.card-description-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+.profile-avatar {
+  width: 3rem;
+  border: 1px solid var(--neutral-white);
+  border-radius: 50%;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--neutral-white);
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: var(--primary-cyan);
+}
